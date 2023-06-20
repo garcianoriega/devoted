@@ -20,6 +20,7 @@ explore: billion_orders {
   }
 
   join: users {
+    fields: [users.age, users.city, users.country]
     type: left_outer
     sql_on: ${orders.user_id} = ${users.id} ;;
     relationship: many_to_one
