@@ -20,9 +20,9 @@ explore: inventory_items {
 }
 
 explore: orders {
-  #fields: [orders.id, orders.status, orders.created_date]
+  fields: [orders.id, orders.status, orders.created_date]
   join: users {
-    fields: [orders.id, orders.user_id, orders.status, orders.created_date, users.age]
+  #  fields: [orders.id, orders.user_id, orders.status, orders.created_date, users.age]
     type: left_outer
     sql_on: ${orders.user_id} = ${users.id} ;;
     relationship: many_to_one
