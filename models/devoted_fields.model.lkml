@@ -25,9 +25,12 @@ explore: orders {
   #fields: [ALL_FIELDS*]
 
   # all fields of all views except -view.table
-  fields: [ALL_FIELDS*, -users.country]
+  #fields: [ALL_FIELDS*, -users.country]
+
+  fields: [users*]
   join: users {
   #  fields: [orders.id, orders.user_id, orders.status, orders.created_date, users.age]
+
     type: left_outer
     sql_on: ${orders.user_id} = ${users.id} ;;
     relationship: many_to_one
