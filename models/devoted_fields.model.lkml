@@ -21,7 +21,11 @@ explore: inventory_items {
 
 explore: orders {
   #fields: [orders.id, orders.status, orders.created_date]
-  fields: [ALL_FIELDS*]
+  # all fields of all views using ALL_FIELDS
+  #fields: [ALL_FIELDS*]
+
+  # all fields of all views except -view.table
+  fields: [ALL_FIELDS*, -users.country]
   join: users {
   #  fields: [orders.id, orders.user_id, orders.status, orders.created_date, users.age]
     type: left_outer
