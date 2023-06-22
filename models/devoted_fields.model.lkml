@@ -21,6 +21,7 @@ explore: inventory_items {
 
 explore: orders {
   join: users {
+    fields: [orders.id, orders.status, orders.created_date]
     type: left_outer
     sql_on: ${orders.user_id} = ${users.id} ;;
     relationship: many_to_one
