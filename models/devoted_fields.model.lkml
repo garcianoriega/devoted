@@ -33,7 +33,7 @@ explore: orders {
   #fields: [ALL_FIELDS*, -users.country]
 
   # all fields of a specyfic view
-  fields: [users*]
+  fields: [orders*]
 
   join: users {
   #  fields: [orders.id, orders.user_id, orders.status, orders.created_date, users.age]
