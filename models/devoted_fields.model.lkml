@@ -33,11 +33,13 @@ explore: orders {
   #fields: [ALL_FIELDS*, -users.country]
 
   # all fields of a specyfic view
-  fields: [orders*]
+  #fields: [orders*]
 
   join: users {
   #  fields: [orders.id, orders.user_id, orders.status, orders.created_date, users.age]
 
+  # Using an empty list
+  # fields: []
     type: left_outer
     sql_on: ${orders.user_id} = ${users.id} ;;
     relationship: many_to_one
