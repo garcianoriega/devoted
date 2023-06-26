@@ -39,10 +39,10 @@ explore: orders {
     #  fields: [orders.id, orders.user_id, orders.status, orders.created_date, users.age]
 
     # Using an empty list
-    #fields: []
+    fields: []
 
     #fields of a view
-    fields: [orders.status, users.age]
+    #fields: [orders.status, users.age]
 
     type: left_outer
     sql_on: ${orders.user_id} = ${users.id} ;;
