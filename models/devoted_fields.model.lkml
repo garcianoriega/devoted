@@ -41,7 +41,7 @@ explore: orders {
     # Using an empty list
     #fields: []
 
-    #all fields of a view
+    #fields of a view
     fields: [orders.status, users.age]
 
     type: left_outer
