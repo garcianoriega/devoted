@@ -36,13 +36,15 @@ explore: orders {
   #fields: [orders*]
 
   join: users {
-    #  fields: [orders.id, orders.user_id, orders.status, orders.created_date, users.age]
+      fields: [users.city, users.country]
 
     # Using an empty list
-    fields: []
+    #fields: []
 
     #fields of a view
     #fields: [orders.status, users.age]
+
+    #fields [ALL_FIELDS*]
 
     type: left_outer
     sql_on: ${orders.user_id} = ${users.id} ;;
