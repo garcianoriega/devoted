@@ -27,7 +27,7 @@ explore: orders {
   #fields: [orders.id, orders.status, orders.created_date]
 
   # all fields of all views using ALL_FIELDS
-  #fields: [ALL_FIELDS*]
+  fields: [ALL_FIELDS*]
 
   # all fields of all views except one: -view.table
   #fields: [ALL_FIELDS*, -users.country]
@@ -36,7 +36,9 @@ explore: orders {
   #fields: [orders*]
 
   join: users {
-      fields: [users.city, users.country]
+    #fields parameter for join
+    # https://cloud.google.com/looker/docs/reference/param-explore-join-fields
+    #fields: [users.city, users.country, orders.created_date]
 
     # Using an empty list
     #fields: []
