@@ -30,7 +30,7 @@ explore: orders {
   #fields: [ALL_FIELDS*]
 
   # all fields of all views except one or more: -view.table
-  fields: [ALL_FIELDS*, -users.country, -users.city]
+  fields: [ALL_FIELDS*, -users.country, -users.zip]
 
   # all fields of a specyfic view
   #fields: [orders*]
